@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
-// import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import img1 from "@/public/images/image_1.jpg";
 import img2 from "@/public/images/image_2.jpg";
 import img3 from "@/public/images/image_3.jpg";
@@ -19,7 +19,7 @@ import img9 from "@/public/images/image_9.jpg";
 interface MenuItem {
   title: string;
   href: string;
-  image: StaticImageData | string;
+  image: StaticImageData;
   content: React.ReactNode;
 }
 
@@ -152,9 +152,9 @@ const menuItems: MenuItem[] = [
 ];
 export default function FullPageMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState<string | null>(null);
-  //   const pathname = usePathname();
-
+  const pathname = usePathname();
+  const [activeItem, setActiveItem] = useState<string | null>("ACCUEIL");
+  const router = useRouter();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setActiveItem(null);
@@ -231,7 +231,23 @@ export default function FullPageMenu() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black text-white z-40 flex flex-col"
           >
-            <div className="container mx-auto flex flex-col h-full">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-0 left-0 w-full h-full"
+              style={{
+                backgroundImage: `url(${
+                  menuItems.find((item) => item.title === activeItem)?.image
+                    ?.src
+                })`,
+                backgroundSize: "cover",
+                backgroundPosition: "top",
+              }}
+            ></motion.div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[1] backdrop-filter backdrop-blur-3xl"></div>
+            <div className="container mx-auto flex flex-col h-full relative z-[3]">
               {/* Title "OPRAH SQUADRA" */}
               <div className="absolute top-56 right-12 transform -rotate-90 origin-right z-10">
                 <p className="tracking-widest title-4 text-green-400 whitespace-nowrap">
@@ -268,7 +284,10 @@ export default function FullPageMenu() {
                         >
                           <button
                             onMouseEnter={() => handleItemClick(item.title)}
-                            className="text-lg md:text-3xl hover:text-green-400 transition-colors flex items-center space-x-4"
+                            className={`text-lg md:text-3xl hover:text-green-400 ${
+                              pathname === item.href ? "text-green-400" : ""
+                            } transition-colors flex items-center space-x-4`}
+                            onClick={() => router.push(item.href)}
                           >
                             <ArrowRight
                               className={`transition-transform ${
@@ -294,7 +313,7 @@ export default function FullPageMenu() {
                         exit="exit"
                         className="w-full relative"
                       >
-                        <div className="w-full h-64 md:h-96 relative rounded-lg overflow-hidden">
+                        <div className="w-full h-64 md:h-96 object-cover relative rounded-lg overflow-hidden">
                           <Image
                             src={
                               menuItems.find(
@@ -303,7 +322,8 @@ export default function FullPageMenu() {
                             }
                             alt={`${activeItem} visual`}
                             layout="fill"
-                            objectFit="cover"
+                            objectFit="contain"
+                            className="object-cover bg-top"
                           />
                         </div>
                         <motion.div
@@ -311,7 +331,7 @@ export default function FullPageMenu() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 20 }}
                           transition={{ delay: 0.2, duration: 0.3 }}
-                          className="mt-4 title-3 lowercase"
+                          className="mt-4 title-3 lowercase text-center mt-4"
                         >
                           {activeItem}
                         </motion.div>
