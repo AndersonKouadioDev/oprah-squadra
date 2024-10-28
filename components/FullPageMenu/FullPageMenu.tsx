@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 // import { usePathname } from "next/navigation";
@@ -19,7 +19,7 @@ import img9 from "@/public/images/image_9.jpg";
 interface MenuItem {
   title: string;
   href: string;
-  image: JSX.Element;
+  image: StaticImageData | JSX.Element;
   content: React.ReactNode;
 }
 
@@ -153,8 +153,7 @@ const menuItems: MenuItem[] = [
 export default function FullPageMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
-//   const pathname = usePathname();
-
+  //   const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -257,9 +256,7 @@ export default function FullPageMenu() {
                       Venez découvrir !
                     </motion.p>
 
-                    <h1 className="title mt-4 mb-4">
-                      menu
-                    </h1>
+                    <h1 className="title mt-4 mb-4">menu</h1>
                   </div>
                   <ScrollArea className="h-[80vh] px-12 pb-20">
                     <nav className="space-y-6 pr-4">
