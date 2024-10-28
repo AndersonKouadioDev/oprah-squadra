@@ -19,7 +19,7 @@ import img9 from "@/public/images/image_9.jpg";
 interface MenuItem {
   title: string;
   href: string;
-  image: string;
+  image: JSX.Element;
   content: React.ReactNode;
 }
 
