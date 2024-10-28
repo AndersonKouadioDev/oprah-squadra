@@ -6,7 +6,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import img1 from "@/public/images/image_1.jpg";
 import img2 from "@/public/images/image_2.jpg";
 import img3 from "@/public/images/image_3.jpg";
@@ -153,7 +153,7 @@ const menuItems: MenuItem[] = [
 export default function FullPageMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const pathname = usePathname();
+//   const pathname = usePathname();
 
 
   const toggleMenu = () => {
