@@ -1,10 +1,10 @@
-import DockBar from "@/components/DockBar";
+import FullPageMenu from "@/components/FullPageMenu/FullPageMenu";
 import HeroSection from "@/components/home/HeroSection/hero.section";
 
 export default function Home() {
   return (
     <div>
-      <DockBar />
+      <FullPageMenu />
       <HeroSection />
     </div>
   );

@@ -21,7 +21,7 @@ export default function HeroSection() {
   return (
     <Section
       id="hero"
-      className="min-h-screen w-full overflow-hidden"
+      className="min-h-screen relative w-full overflow-hidden"
       style={{
         backgroundImage: "url('/images/image_5.jpg')",
         backgroundSize: "cover",
@@ -30,7 +30,7 @@ export default function HeroSection() {
         backgroundColor: "black",
       }}
     >
-      <main className="mx-auto pt-16 sm:pt-24 md:pt-32 text-center relative px-4">
+      <main className="mx-auto pt-16 sm:pt-24 md:pt-32 text-center px-4">
         <div className="relative">
           <motion.div
             initial={{ scale: 4.5, height: "80vh" }}
@@ -58,13 +58,13 @@ export default function HeroSection() {
             />
           </motion.div>
         </div>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto bottom-32">
           <AudioPlayer x={-200} y={y1} />
           <div className="relative top-40 left-40">
             <div className="w-16 h-16 rounded-full border-4 border-white border-dashed" />
           </div>
 
-          <div className="absolute bottom-20 right-20 flex gap-4">
+          <div className="absolute bottom-60 -right-10 md:right-20 flex gap-4">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="w-8 bg-black h-32 relative">
                 <div className="absolute -right-4 top-8 w-8 h-2 bg-white" />
@@ -128,7 +128,7 @@ export default function HeroSection() {
 const AudioPlayer = ({ x, y }: { x: number; y: MotionValue<number> }) => {
   return (
     <motion.div
-      className="cursor-pointer bottom-32 left-8 bg-black/20 backdrop-blur-lg text-white p-4 rounded-xl w-80"
+      className="absolute cursor-pointer bottom-48 -left-4 md:left-20 bg-black/20 backdrop-blur-lg text-white p-4 rounded-xl w-80"
       initial={{ opacity: 0, x: x }}
       animate={{ opacity: 1, x: 0 }}
       style={{ y: y }}
