@@ -9,7 +9,7 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="py-10">
       <Carousel items={cards} />
     </div>
   );

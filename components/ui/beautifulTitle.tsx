@@ -20,7 +20,7 @@ export default function BeautifulTitle({
         mass: 1,
         offset: 100
       }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       <div className="flex w-fit relative">
         <div
@@ -34,7 +34,7 @@ export default function BeautifulTitle({
         />
         <div className="relative z-[1]">
           <h3
-            className={`text-[200px] bigTitle ${textColor}`}
+            className={` text-[150px] md:text-[200px] bigTitle ${textColor}`}
             style={{
               textShadow: `2px 2px 0px ${shadow_1}, 4px 4px 0px ${shadow_2}`,
             }}

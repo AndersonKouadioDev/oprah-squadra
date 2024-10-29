@@ -10,11 +10,11 @@ export default function AlbumSection() {
   return (
     <Section
       id="album"
-      className="min-h-screen relative bg-black w-full p-6 lg:p-12"
+      className="min-h-screen relative bg-black w-full p-6 lg:p-12 py-20"
     >
       {/* Content */}
       <div className="relative z-[2]">
-        <div className="flex flex-col lg:flex-row lg:justify-between items-center">
+        <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center overflow-hidden">
           <BeautifulTitle title="Album" />
           <div className="max-w-lg">
             <Motion
