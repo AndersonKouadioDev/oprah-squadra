@@ -7,14 +7,14 @@ import Image, { StaticImageData } from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import img1 from "@/public/images/image_1.jpg";
-import img2 from "@/public/images/image_2.jpg";
-import img3 from "@/public/images/image_3.jpg";
-import img4 from "@/public/images/image_4.jpg";
-import img5 from "@/public/images/image_6.jpg";
-import img6 from "@/public/images/image_7.jpg";
-import img7 from "@/public/images/image_8.jpg";
-import img9 from "@/public/images/image_9.jpg";
+import img1 from "@/public/images/image_1.png";
+import img2 from "@/public/images/image_2.png";
+import img3 from "@/public/images/image_3.png";
+import img4 from "@/public/images/image_4.png";
+import img5 from "@/public/images/image_6.png";
+import img6 from "@/public/images/image_7.png";
+import img7 from "@/public/images/image_8.png";
+import img9 from "@/public/images/image_9.png";
 
 interface MenuItem {
   title: string;
@@ -155,10 +155,12 @@ export default function FullPageMenu() {
   const pathname = usePathname();
   const [activeItem, setActiveItem] = useState<string | null>("ACCUEIL");
   const router = useRouter();
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setActiveItem(null);
   };
+  console.log(activeItem);
 
   const handleItemClick = (title: string) => {
     setActiveItem(title === activeItem ? null : title);
@@ -249,11 +251,16 @@ export default function FullPageMenu() {
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[1] backdrop-filter backdrop-blur-3xl"></div>
             <div className="container mx-auto flex flex-col h-full relative z-[3]">
               {/* Title "OPRAH SQUADRA" */}
-              <div className="absolute top-56 right-12 transform -rotate-90 origin-right z-10">
-                <p className="tracking-widest title-4 text-green-400 whitespace-nowrap">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: 1 }}
+                className="absolute top-56 right-12 transform -rotate-90 origin-right z-10"
+              >
+                <motion.p className="tracking-widest title-4 text-green-400 whitespace-nowrap">
                   oprah squadra
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
               <div className="flex-1 flex flex-col lg:flex-row">
                 <motion.div
@@ -286,7 +293,7 @@ export default function FullPageMenu() {
                             onMouseEnter={() => handleItemClick(item.title)}
                             className={`text-lg md:text-3xl hover:text-green-400 ${
                               pathname === item.href ? "text-green-400" : ""
-                            } transition-colors flex items-center space-x-4`}
+                            } transition-colors flex items-center space-x-4 font-bigTitle`}
                             onClick={() => router.push(item.href)}
                           >
                             <ArrowRight
@@ -323,7 +330,7 @@ export default function FullPageMenu() {
                             alt={`${activeItem} visual`}
                             layout="fill"
                             objectFit="contain"
-                            className="object-cover bg-top"
+                            className="object-cover bg-top grayscale"
                           />
                         </div>
                         <motion.div
@@ -331,7 +338,7 @@ export default function FullPageMenu() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 20 }}
                           transition={{ delay: 0.2, duration: 0.3 }}
-                          className="mt-4 title-3 lowercase text-center mt-4"
+                          className="mt-4 title-3 lowercase text-center"
                         >
                           {activeItem}
                         </motion.div>

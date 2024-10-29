@@ -1,4 +1,5 @@
 import FullPageMenu from "@/components/FullPageMenu/FullPageMenu";
+import AlbumSection from "@/components/home/AlbumSection/album.section";
 import HeroSection from "@/components/home/HeroSection/hero.section";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <FullPageMenu />
       <HeroSection />
+      <AlbumSection />
     </div>
   );
 }

@@ -57,6 +57,7 @@ const config: Config = {
       },
       fontFamily: {
         title: ["var(--font-title)", ...fontFamily.sans],
+        bigTitle: ["var(--font-big-title)", ...fontFamily.sans],
         sans: ["var(--font-sans)", ...fontFamily.sans],
         mono: ["var(--font-mono)", ...fontFamily.mono],
       },

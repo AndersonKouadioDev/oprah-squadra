@@ -10,7 +10,7 @@ import {
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
-  name: "oprah",
+  name: "Oprah",
   subname: "squadra",
   description: "Smart scheduling powered by AI.",
   cta: "Get Started",

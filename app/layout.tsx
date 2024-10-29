@@ -3,6 +3,13 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
+
+const fontBigTitle = localFont({
+  src: "./fonts/RailwayGank.ttf",
+  variable: "--font-big-title",
+  weight: "100 900",
+});
+
 const fontTitle = localFont({
   src: "./fonts/Blackpast.ttf",
   variable: "--font-title",
@@ -156,7 +163,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} ${fontTitle.variable}  antialiased`}
+        className={`${fontSans.variable} ${fontMono.variable} ${fontTitle.variable} ${fontBigTitle.variable}  antialiased`}
       >
         <ThemeProvider
           attribute="class"
