@@ -10,7 +10,7 @@ export default function HeroSection() {
   const { scrollY } = useScroll({
     offset: ["start start", "end start"],
   });
-  const yTitle = useTransform(scrollY, [0, 300], [-80, -30]);
+  const yTitle = useTransform(scrollY, [0, 300], [0, -80]);
   const y1 = useTransform(scrollY, [0, 300], [100, 0]);
   const y2 = useTransform(scrollY, [0, 300], [50, 0]);
   const y3 = useTransform(scrollY, [0, 300], [0, 0]);
@@ -66,16 +66,16 @@ export default function HeroSection() {
               scale: { delay: 0, duration: 1.8, ease: easeInOutCubic },
               height: { delay: 0, duration: 1.8, ease: easeInOutCubic },
             }}
-            className="mb-16 relative z-20"
+            className="mb-20 md:mb-32 relative z-20"
             style={{ transformOrigin: "top", y: yTitle }}
           >
-            <div className="bigTitle">{siteConfig.name}</div>
+            <div className="font-bigTitle text-7xl md:text-[200px]">{siteConfig.name}</div>
           </motion.div>
           <motion.div
             initial={{ y: -28, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="absolute flex justify-center items-center title-2 inset-0 top-20 lg:top-28 uppercase z-10"
+            className="absolute flex justify-center items-center title-2 md:mt-4 inset-0 top-20 md:top-48 lg:top-54 uppercase z-10"
           >
             <Image
               src="/images/squadra_2.png"

@@ -4,17 +4,17 @@ import Motion from "@/components/motion";
 import { Section } from "@/components/section";
 import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
-import { AppleCardsCarouselDemo } from "../AppleCardsCarouselDemo/AppleCardsCarouselDemo";
+import { AlbumCarousel } from "./AlbumCarousel";
 
 export default function AlbumSection() {
   return (
     <Section
       id="album"
-      className="min-h-screen relative bg-black w-full p-6 lg:p-12 py-20"
+      className="min-h-screen relative bg-black w-full p-6 lg:p-12 py-20 overflow-hidden"
     >
       {/* Content */}
       <div className="relative z-[2]">
-        <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center overflow-hidden">
+        <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
           <BeautifulTitle title="Album" />
           <div className="max-w-lg">
             <Motion
@@ -35,7 +35,7 @@ export default function AlbumSection() {
             </Motion>
           </div>
         </div>
-        <AppleCardsCarouselDemo />
+        <AlbumCarousel />
       </div>
 
       {/* Overlay */}

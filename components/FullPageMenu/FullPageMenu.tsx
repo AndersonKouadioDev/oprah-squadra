@@ -40,7 +40,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "BIOGRAPHIE",
-    href: "/biographie",
+    href: "#biography",
     image: img2,
     content: (
       <>
@@ -56,7 +56,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "DATES / CONCERTS",
-    href: "/concerts",
+    href: "#concerts",
     image: img3,
     content: (
       <>
@@ -71,7 +71,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "CLIP VIDÉOS",
-    href: "/videos",
+    href: "#videos",
     image: img4,
     content: (
       <>
@@ -86,7 +86,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "ALBUMS",
-    href: "/albums",
+    href: "#albums",
     image: img5,
     content: (
       <>
@@ -101,7 +101,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "SHOP DE LA SQUADRA",
-    href: "/shop",
+    href: "#shop",
     image: img6,
     content: (
       <>
@@ -118,7 +118,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "REJOINDRE LA TEAM",
-    href: "/join",
+    href: "#join",
     image: img7,
     content: (
       <>
@@ -135,7 +135,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "CONTACTEZ-NOUS",
-    href: "/contact",
+    href: "#contact",
     image: img9,
     content: (
       <>
@@ -160,7 +160,7 @@ export default function FullPageMenu() {
     setIsOpen(!isOpen);
     setActiveItem(null);
   };
-  console.log(activeItem);
+  
 
   const handleItemClick = (title: string) => {
     setActiveItem(title === activeItem ? null : title);
@@ -218,7 +218,7 @@ export default function FullPageMenu() {
     <>
       <button
         onClick={toggleMenu}
-        className="fixed top-4 right-4 z-50 p-2 bg-black text-white rounded-full"
+        className="fixed top-2 right-2 z-50 p-2 bg-black text-white rounded-full"
         aria-label="Toggle menu"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}

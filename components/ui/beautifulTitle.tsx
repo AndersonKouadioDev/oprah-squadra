@@ -18,7 +18,7 @@ export default function BeautifulTitle({
         stiffness: 200,
         damping: 8,
         mass: 1,
-        offset: 100
+        offset: 100,
       }}
       viewport={{ once: true, amount: 0.5 }}
     >
@@ -34,7 +34,7 @@ export default function BeautifulTitle({
         />
         <div className="relative z-[1]">
           <h3
-            className={` text-[150px] md:text-[200px] bigTitle ${textColor}`}
+            className={`text-8xl md:text-[100px] bigTitle ${textColor}`}
             style={{
               textShadow: `2px 2px 0px ${shadow_1}, 4px 4px 0px ${shadow_2}`,
             }}
