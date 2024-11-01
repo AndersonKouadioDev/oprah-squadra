@@ -1,6 +1,5 @@
 "use client";
 
-import Motion from "@/components/motion";
 import { Section } from "@/components/section";
 import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
@@ -17,7 +16,7 @@ export default function AlbumSection() {
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
           <BeautifulTitle title="Album" />
           <div className="max-w-lg">
-            <Motion
+            {/* <Motion
               variant="fadeIn"
               animationParams={{
                 delay: 0.6,
@@ -32,7 +31,7 @@ export default function AlbumSection() {
                 repudiandae veniam necessitatibus sunt nam aliquid sit nostrum,
                 aliquam officiis quam praesentium quas! Magni aspernatur iure
               </p>
-            </Motion>
+            </Motion> */}
           </div>
         </div>
         <AlbumCarousel />

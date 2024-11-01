@@ -23,7 +23,7 @@ export default function HeroSection() {
   return (
     <Section
       id="hero"
-      className="min-h-screen relative bg-black w-full overflow-hidden"
+      className="min-h-screen z-10 relative bg-black w-full overflow-hidden"
     >
       {/* Overlay */}
       <motion.div
@@ -52,7 +52,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
-        className="fixed top-20 right-6 lg:right-8 transform -rotate-90 origin-right z-10"
+        className="fixed top-20 right-6 lg:right-8 transform -rotate-90 origin-right z-[3]"
       >
         <p className="tracking-widest subtitle text-white whitespace-nowrap">
           oprah squadra

@@ -34,7 +34,7 @@ export default function BeautifulTitle({
         />
         <div className="relative z-[1]">
           <h3
-            className={`text-8xl md:text-[100px] bigTitle ${textColor}`}
+            className={`text-5xl md:text-[100px] bigTitle ${textColor}`}
             style={{
               textShadow: `2px 2px 0px ${shadow_1}, 4px 4px 0px ${shadow_2}`,
             }}
