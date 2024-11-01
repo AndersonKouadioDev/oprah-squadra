@@ -5,17 +5,19 @@ import { easeInOutCubic } from "@/lib/animation";
 import { siteConfig } from "@/lib/config";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { HeroVideoDialogSection } from "./heroVideo.section";
 
 export default function HeroSection() {
   const { scrollY } = useScroll({
     offset: ["start start", "end start"],
   });
   const yTitle = useTransform(scrollY, [0, 300], [0, -80]);
-  const y1 = useTransform(scrollY, [0, 300], [100, 0]);
-  const y2 = useTransform(scrollY, [0, 300], [50, 0]);
-  const y3 = useTransform(scrollY, [0, 300], [0, 0]);
-  const y4 = useTransform(scrollY, [0, 300], [50, 0]);
-  const y5 = useTransform(scrollY, [0, 300], [100, 0]);
+  const ySubTitle = useTransform(scrollY, [0, 300], [0, -50]);
+  // const y1 = useTransform(scrollY, [0, 300], [100, 0]);
+  // const y2 = useTransform(scrollY, [0, 300], [50, 0]);
+  // const y3 = useTransform(scrollY, [0, 300], [0, 0]);
+  // const y4 = useTransform(scrollY, [0, 300], [50, 0]);
+  // const y5 = useTransform(scrollY, [0, 300], [100, 0]);
   //   const opcacity = useTransform(scrollY, [0, 300], [0.3, 1]);
 
   return (
@@ -69,12 +71,15 @@ export default function HeroSection() {
             className="mb-20 md:mb-32 relative z-20"
             style={{ transformOrigin: "top", y: yTitle }}
           >
-            <div className="font-bigTitle text-7xl md:text-[200px]">{siteConfig.name}</div>
+            <div className="font-bigTitle text-7xl md:text-[200px]">
+              {siteConfig.name}
+            </div>
           </motion.div>
           <motion.div
             initial={{ y: -28, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
+            style={{ y: ySubTitle }}
             className="absolute flex justify-center items-center title-2 md:mt-4 inset-0 top-20 md:top-48 lg:top-54 uppercase z-10"
           >
             <Image
@@ -85,6 +90,7 @@ export default function HeroSection() {
             />
           </motion.div>
         </div>
+        <HeroVideoDialogSection />
         {/* <div className="max-w-5xl mx-auto bottom-32">
           <AudioPlayer x={-200} y={y1} />
           <motion.div
@@ -104,7 +110,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div> */}
-        <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 h-auto sm:h-[500px] select-none">
+        {/* <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 h-auto sm:h-[500px] select-none">
           <motion.img
             src="/images/image_7.png"
             alt="iPhone"
@@ -150,7 +156,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 1 }}
             className="w-40 sm:w-64 flex-shrink-0"
           />
-        </div>
+        </div> */}
       </main>
     </Section>
   );
