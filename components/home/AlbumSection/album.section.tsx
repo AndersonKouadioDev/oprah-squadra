@@ -5,15 +5,16 @@ import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
 import { AlbumCarousel } from "./AlbumCarousel";
 import Motion from "@/components/motion";
+import Image from "next/image";
 
 export default function AlbumSection() {
   return (
     <Section
       id="album"
-      className="relative bg-black w-full p-6 lg:p-12 py-20 overflow-hidden"
+      className="min-h-screen relative bg-black w-full px-6 py-20 lg:px-12 lg:py-32"
     >
       {/* Content */}
-      <div className="relative z-[2]">
+      <div className="relative z-[2] overflow-hidden">
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
           <BeautifulTitle title="Album" />
           <div className="max-w-lg">
@@ -22,7 +23,7 @@ export default function AlbumSection() {
               animationParams={{
                 delay: 0.6,
               }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <p className="body-overline">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -43,7 +44,7 @@ export default function AlbumSection() {
             mass: 1,
             offset: 100,
           }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <AlbumCarousel />
         </Motion>
@@ -83,6 +84,14 @@ export default function AlbumSection() {
           backgroundRepeat: "no-repeat",
         }}
       />
+      <div className="absolute -top-10 right-0 z-10">
+        <Image
+          src="/images/illustrations/skotch_2.png"
+          alt="skotch"
+          width={200}
+          height={100}
+        />
+      </div>
     </Section>
   );
 }

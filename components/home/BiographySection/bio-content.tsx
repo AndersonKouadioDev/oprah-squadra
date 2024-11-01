@@ -15,7 +15,16 @@ export default function BioContent() {
               </Motion>
               <div className="relative flex justify-center items-center h-full z-[1] pt-8 md:pt-16 px-8 md:px-16">
                 <div className="relative self-end -left-2 max-w-[100%] md:max-w-[80%] mr-auto">
-                  <Motion variant="fadeIn">
+                  <Motion
+                    variant="verticalSlideIn"
+                    animationParams={{
+                      stiffness: 200,
+                      damping: 8,
+                      mass: 1,
+                      offset: 100,
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
+                  >
                     <img
                       alt="App screenshot"
                       src="/images/image_26.jpg"
@@ -27,7 +36,17 @@ export default function BioContent() {
                   className="max-w-[60%] md:max-w-[50%] absolute top-auto bottom-auto left-auto -right-2 md:right-16
                 flex justify-center flex-col"
                 >
-                  <Motion variant="fadeIn">
+                  <Motion
+                    variant="horizontalSlideIn"
+                    animationParams={{
+                      stiffness: 200,
+                      damping: 8,
+                      mass: 1,
+                      offset: 100,
+                      delay: 0.7,
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
+                  >
                     <img
                       alt="App screenshot"
                       src="/images/image_26.jpg"
@@ -40,19 +59,41 @@ export default function BioContent() {
           </div>
           <div className="order-1 lg:order-2">
             <div className="text-left">
-              <p className="uppercase text-sm mb-4 md:text-lg font-bold tracking-tight text-color-one">
-                Ce qu&apos;il faut savoir de moi
-              </p>
-              <h2 className="title-3">L&apos;artiste</h2>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                <strong>Oprah</strong> a commencé sa carrière musicale dans les
-                années 2017, se distinguant par son style unique qui mélange rap
-                et influences locales. Elle aborde souvent des thèmes tels que
-                les inégalités sociales, l&apos;émancipation des femmes, et la
-                culture ivoirienne. Elle est également impliquée dans diverses
-                initiatives visant à soutenir les jeunes artistes et à
-                promouvoir la culture ivoirienne.
-              </p>
+              <Motion
+                variant="verticalSlideIn"
+                animationParams={{
+                  stiffness: 200,
+                  damping: 8,
+                  mass: 1,
+                  offset: 100,
+                }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <p className="uppercase text-sm mb-4 md:text-lg font-bold tracking-tight text-color-one">
+                  Ce qu&apos;il faut savoir de moi
+                </p>
+              </Motion>
+              <Motion
+                variant="fadeIn"
+                animationParams={{
+                  stiffness: 200,
+                  damping: 8,
+                  mass: 1,
+                  offset: 100,
+                }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <h2 className="title-3">L&apos;artiste</h2>
+                <p className="mt-6 text-lg leading-8 text-gray-300">
+                  <strong>Oprah</strong> a commencé sa carrière musicale dans
+                  les années 2017, se distinguant par son style unique qui
+                  mélange rap et influences locales. Elle aborde souvent des
+                  thèmes tels que les inégalités sociales, l&apos;émancipation
+                  des femmes, et la culture ivoirienne. Elle est également
+                  impliquée dans diverses initiatives visant à soutenir les
+                  jeunes artistes et à promouvoir la culture ivoirienne.
+                </p>
+              </Motion>
             </div>
             <GalleryContent />
           </div>

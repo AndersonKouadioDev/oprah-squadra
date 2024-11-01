@@ -9,7 +9,7 @@ export function AlbumCarousel() {
   ));
 
   return (
-    <div className="py-10">
+    <div>
       <Carousel items={cards} />
     </div>
   );
