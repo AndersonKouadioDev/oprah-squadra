@@ -62,7 +62,7 @@ export default function HeroSection() {
       <main className="mx-auto pt-16 sm:pt-24 md:pt-32 text-center px-4 relative z-[2]">
         <div className="relative">
           <motion.div
-            initial={{ scale: 4.5, height: "80vh" }}
+            initial={{ scale: 2, height: "80vh" }}
             animate={{ scale: 1, height: "10vh" }}
             transition={{
               scale: { delay: 0, duration: 1.8, ease: easeInOutCubic },

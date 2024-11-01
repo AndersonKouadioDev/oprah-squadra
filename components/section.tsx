@@ -46,7 +46,12 @@ const Section = forwardRef<HTMLElement, SectionProps>(
 
     return (
       <section id={id || sectionId} ref={ref} style={style}>
-        <div className={cn("sm:py-20 py-12", className)}>
+        <div
+          className={cn(
+            "sm:py-20 py-12 max-w-screen-2xl min-h-[600px] mx-auto",
+            className
+          )}
+        >
           {(title || subtitle || description) && (
             <div className={cn(alignmentClass, "space-y-4 pb-10 mx-auto")}>
               {title && (

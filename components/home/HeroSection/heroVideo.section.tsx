@@ -1,7 +1,7 @@
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 export function HeroVideoDialogSection() {
   return (
-    <div className="relative container py-10 mx-auto">
+    <div className="relative container max-w-screen-lg py-10 mx-auto">
       <HeroVideoDialog
         className="block"
         animationStyle="from-center"

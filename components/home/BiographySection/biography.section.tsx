@@ -3,7 +3,7 @@
 import { Section } from "@/components/section";
 import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import BioContent from "./bio-content";
 
 export default function BiographySection() {
   return (
@@ -34,7 +34,7 @@ export default function BiographySection() {
             </Motion> */}
           </div>
         </div>
-        <AnimatedModalDemo />
+        <BioContent />
       </div>
 
       {/* Overlay */}
@@ -72,64 +72,5 @@ export default function BiographySection() {
         }}
       />
     </Section>
-  );
-}
-
-
-export function AnimatedModalDemo() {
-  const images = [
-    "/images/image_1.png",
-    "/images/image_9.png",
-    "/images/image_6.png",
-    "/images/image_7.png",
-    "/images/image_2.png",
-    "/images/image_5.png",
-  ];
-  return (
-    <div className="py-10 flex flex-col gap-10">
-      <p className="body mx-auto max-w-3xl">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga maiores
-        nisi ab eveniet obcaecati quas? Vel animi quam similique obcaecati
-        doloremque placeat quae reprehenderit? Molestias, provident veniam? Ad
-        voluptas rerum, blanditiis consequuntur quod eius tempore autem dicta
-        iure officiis odit quas quasi consectetur aspernatur inventore, ea
-        itaque officia. Rem porro blanditiis aut sapiente magnam, soluta
-        tempore. Quibusdam, temporibus libero molestias accusamus sunt tenetur
-        sit facere in, assumenda non eaque ad ipsa iste cum cupiditate!
-        Similique, libero voluptates inventore est aspernatur expedita explicabo
-        nobis sit, perferendis nostrum quidem iure officiis perspiciatis id
-        blanditiis qui laboriosam ab autem eius numquam accusantium!
-        Voluptatibus?
-      </p>
-      <div className="flex justify-center items-center">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            whileTap={{
-              scale: 1.1,
-              rotate: 0,
-              zIndex: 100,
-            }}
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-    </div>
   );
 }

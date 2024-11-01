@@ -20,7 +20,7 @@ export default function BeautifulTitle({
         mass: 1,
         offset: 100,
       }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="flex w-fit relative">
         <div

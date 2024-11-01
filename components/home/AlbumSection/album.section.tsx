@@ -4,12 +4,13 @@ import { Section } from "@/components/section";
 import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
 import { AlbumCarousel } from "./AlbumCarousel";
+import Motion from "@/components/motion";
 
 export default function AlbumSection() {
   return (
     <Section
       id="album"
-      className="min-h-screen relative bg-black w-full p-6 lg:p-12 py-20 overflow-hidden"
+      className="relative bg-black w-full p-6 lg:p-12 py-20 overflow-hidden"
     >
       {/* Content */}
       <div className="relative z-[2]">
@@ -34,7 +35,18 @@ export default function AlbumSection() {
             </Motion> */}
           </div>
         </div>
-        <AlbumCarousel />
+        <Motion
+          variant="verticalSlideIn"
+          animationParams={{
+            stiffness: 200,
+            damping: 8,
+            mass: 1,
+            offset: 100,
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <AlbumCarousel />
+        </Motion>
       </div>
 
       {/* Overlay */}
