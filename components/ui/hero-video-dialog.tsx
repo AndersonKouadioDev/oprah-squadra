@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Play, XIcon } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 
 type AnimationStyle =

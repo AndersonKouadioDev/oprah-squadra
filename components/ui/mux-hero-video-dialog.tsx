@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Play, XIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Video from "next-video";
+
 type AnimationStyle =
   | "from-bottom"
   | "from-center"
@@ -15,12 +16,13 @@ type AnimationStyle =
   | "top-in-bottom-out"
   | "left-in-right-out";
 
-interface HeroVideoProps {
+interface MuxHeroVideoProps {
   animationStyle?: AnimationStyle;
   playbackId: string;
   thumbnailSrc: string;
   thumbnailAlt?: string;
   className?: string;
+  video: string | Asset;
 }
 
 const animationVariants = {
@@ -66,13 +68,14 @@ const animationVariants = {
   },
 };
 
-export default function HeroVideoDialog({
+export default function MuxHeroVideoDialog({
   animationStyle = "from-center",
   playbackId,
   thumbnailSrc,
   thumbnailAlt = "Video thumbnail",
   className,
-}: HeroVideoProps) {
+  video,
+}: MuxHeroVideoProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const selectedAnimation = animationVariants[animationStyle];
 
@@ -138,6 +141,7 @@ export default function HeroVideoDialog({
                   metadataViewerUserId="Placeholder (optional)"
                   primaryColor="#FFFFFF"
                   secondaryColor="#000000"
+                  src={video}
                 />
               </div>
             </motion.div>

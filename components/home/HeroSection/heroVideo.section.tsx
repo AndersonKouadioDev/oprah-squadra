@@ -1,12 +1,11 @@
-import MuxHeroVideoDialog from "@/components/ui/mux-hero-video-dialog";
-
+import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 export function HeroVideoDialogSection() {
   return (
     <div className="relative container py-10 mx-auto">
-      <MuxHeroVideoDialog
-        className="dark:hidden block"
+      <HeroVideoDialog
+        className="block"
         animationStyle="from-center"
-        playbackId="Ps4T2vVUg5TzRCVQ2HFvJbMw5302O95Rwwcks2qttptI"
+        videoSrc={"/videos/cover_oprah.mp4"}
         thumbnailSrc="/images/cover.jpg"
         thumbnailAlt="Cover Video"
       />
