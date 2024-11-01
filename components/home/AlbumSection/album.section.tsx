@@ -10,13 +10,13 @@ import Image from "next/image";
 export default function AlbumSection() {
   return (
     <Section
-      id="album"
+      id="musics"
       className="min-h-screen relative bg-black w-full px-6 py-20 lg:px-12 lg:py-32"
     >
       {/* Content */}
       <div className="relative z-[2] overflow-hidden">
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
-          <BeautifulTitle title="Album" />
+          <BeautifulTitle title="Musics" />
           <div className="max-w-lg">
             {/* <Motion
               variant="fadeIn"

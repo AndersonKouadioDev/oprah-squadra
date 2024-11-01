@@ -85,8 +85,8 @@ const menuItems: MenuItem[] = [
     ),
   },
   {
-    title: "ALBUMS",
-    href: "#albums",
+    title: "MUSICS",
+    href: "#musics",
     image: img5,
     content: (
       <>
