@@ -67,7 +67,7 @@ export default function AlbumSection() {
 
       {/* Shape z-1 */}
       <div
-        className="absolute left-[20%] lg:left-[50%] z-10 bottom-0 w-[40%] h-[15%] lg:w-[20%] lg:h-[20%]"
+        className="absolute left-[20%] lg:left-[50%] z-[1] bottom-0 w-[40%] h-[15%] lg:w-[20%] lg:h-[20%]"
         style={{
           backgroundImage: "url('/images/illustrations/manuscrit_7.png')",
           backgroundSize: "contain",
@@ -76,7 +76,7 @@ export default function AlbumSection() {
         }}
       />
       <div
-        className="absolute left-[-10%] z-10 bottom-0 w-[20%] h-[50%]"
+        className="absolute left-[-10%] z-[1] bottom-0 w-[20%] h-[50%]"
         style={{
           backgroundImage: "url('/images/illustrations/manuscrit_1.png')",
           backgroundSize: "contain",
@@ -84,7 +84,7 @@ export default function AlbumSection() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <div className="absolute -top-10 right-0 z-10">
+      <div className="absolute -top-10 right-0 z-[1]">
         <Image
           src="/images/illustrations/skotch_2.png"
           alt="skotch"

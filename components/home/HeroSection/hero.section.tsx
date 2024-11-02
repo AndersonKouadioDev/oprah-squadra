@@ -52,7 +52,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
-        className="fixed top-20 right-6 lg:right-8 transform -rotate-90 origin-right z-[3]"
+        className="fixed top-20 right-6 lg:right-8 transform -rotate-90 origin-right z-[1]"
       >
         <p className="tracking-widest subtitle text-white whitespace-nowrap">
           oprah squadra
