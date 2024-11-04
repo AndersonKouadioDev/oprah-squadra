@@ -13,12 +13,6 @@ export default function HeroSection() {
   });
   const yTitle = useTransform(scrollY, [0, 300], [0, -80]);
   const ySubTitle = useTransform(scrollY, [0, 300], [0, -50]);
-  // const y1 = useTransform(scrollY, [0, 300], [100, 0]);
-  // const y2 = useTransform(scrollY, [0, 300], [50, 0]);
-  // const y3 = useTransform(scrollY, [0, 300], [0, 0]);
-  // const y4 = useTransform(scrollY, [0, 300], [50, 0]);
-  // const y5 = useTransform(scrollY, [0, 300], [100, 0]);
-  //   const opcacity = useTransform(scrollY, [0, 300], [0.3, 1]);
 
   return (
     <Section
@@ -31,7 +25,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         className="absolute top-0 left-0 w-full h-full z-[0]"
         style={{
-          backgroundImage: "url('/images/image_5.png')",
+          backgroundImage: "url('/images/image_2.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -59,7 +53,7 @@ export default function HeroSection() {
         </p>
       </motion.div>
 
-      <main className="mx-auto pt-16 sm:pt-24 md:pt-32 text-center px-4 relative z-[2]">
+      <main className="mx-auto flex flex-col gap-10 pt-16 sm:pt-24 md:pt-32 text-center px-4 relative z-[2]">
         <div className="relative">
           <motion.div
             initial={{ scale: 2, height: "80vh" }}
@@ -91,72 +85,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
         <HeroVideoDialogSection />
-        {/* <div className="max-w-5xl mx-auto bottom-32">
-          <AudioPlayer x={-200} y={y1} />
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            style={{ y: y3 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="absolute top-40 left-40 w-16 h-16 rounded-full border-4 border-white border-dashed"
-          />
-
-          <div className="absolute bottom-60 -right-10 md:right-20 flex gap-4">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-8 bg-black h-32 relative">
-                <div className="absolute -right-4 top-8 w-8 h-2 bg-white" />
-                <div className="absolute -left-4 top-16 w-8 h-2 bg-white" />
-              </div>
-            ))}
-          </div>
-        </div> */}
-        {/* <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 h-auto sm:h-[500px] select-none">
-          <motion.img
-            src="/images/image_7.png"
-            alt="iPhone"
-            initial={{ opacity: 0, x: -200 }}
-            animate={{ opacity: 1, x: 0 }}
-            style={{ y: y1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 flex-shrink-0"
-          />
-          <motion.img
-            src="/images/image_6.png"
-            alt="iPhone"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            style={{ y: y2 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 flex-shrink-0"
-          />
-          <motion.img
-            src="/images/image_7.png"
-            alt="iPhone"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            style={{ y: y3 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 flex-shrink-0"
-          />
-          <motion.img
-            src="/images/image_6.png"
-            alt="iPhone"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            style={{ y: y4 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 flex-shrink-0"
-          />
-          <motion.img
-            src="/images/image_7.png"
-            alt="iPhone"
-            initial={{ opacity: 0, x: 200 }}
-            animate={{ opacity: 1, x: 0 }}
-            style={{ y: y5 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 flex-shrink-0"
-          />
-        </div> */}
       </main>
     </Section>
   );

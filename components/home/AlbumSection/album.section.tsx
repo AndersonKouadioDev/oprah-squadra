@@ -5,7 +5,6 @@ import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
 import { AlbumCarousel } from "./AlbumCarousel";
 import Motion from "@/components/motion";
-import Image from "next/image";
 
 export default function AlbumSection() {
   return (
@@ -18,22 +17,13 @@ export default function AlbumSection() {
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
           <BeautifulTitle title="Musics" />
           <div className="max-w-lg">
-            {/* <Motion
+            <Motion
               variant="fadeIn"
               animationParams={{
                 delay: 0.6,
               }}
               viewport={{ once: true, amount: 0.2 }}
-            >
-              <p className="body-overline">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit molestias dicta, similique dolorem animi magni
-                maxime neque explicabo, eveniet ipsa a voluptas. Quia dicta esse
-                error consequuntur corporis quibusdam repellendus omnis earum,
-                repudiandae veniam necessitatibus sunt nam aliquid sit nostrum,
-                aliquam officiis quam praesentium quas! Magni aspernatur iure
-              </p>
-            </Motion> */}
+            ></Motion>
           </div>
         </div>
         <Motion
@@ -84,14 +74,6 @@ export default function AlbumSection() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <div className="absolute -top-10 right-0 z-[1]">
-        <Image
-          src="/images/illustrations/skotch_2.png"
-          alt="skotch"
-          width={200}
-          height={100}
-        />
-      </div>
     </Section>
   );
 }

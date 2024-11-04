@@ -10,8 +10,8 @@ export default function Home() {
       <FullPageMenu />
       <HeroSection />
       <AlbumSection />
-      <ClipVideoSection />
       <BiographySection />
+      <ClipVideoSection />
     </div>
   );
 }
