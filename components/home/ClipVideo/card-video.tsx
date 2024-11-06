@@ -29,7 +29,7 @@ export default function Card({ card }: CardProps) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <motion.div className="p-4 w-full max-w-sm group transition-all duration-300 hover:bg-neutral-800 rounded-xl cursor-pointer">
+        <motion.div className="p-4 w-full max-w-sm group transition-all duration-300 bg-neutral-800 rounded-xl cursor-pointer">
           <div className="flex gap-4 flex-col w-full relative">
             <div className="absolute top-0 left-0 w-full rounded-xl flex justify-between items-center p-2 text-neutral-400 group-hover:text-white">
               <div className="flex gap-2 items-center">

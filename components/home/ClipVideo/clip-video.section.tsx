@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Motion from "@/components/motion";
 import Image from "next/image";
 import { ClipVideoContent } from "./clip-video.content";
+import clipVideos from "@/datas/clip-videos.json";
 
 export default function ClipVideoSection() {
   return (
@@ -47,7 +48,7 @@ export default function ClipVideoSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="w-full"
         >
-          <ClipVideoContent />
+          <ClipVideoContent clipVideos={clipVideos} />
         </Motion>
       </div>
 

@@ -34,7 +34,7 @@ const DummyContent = () => {
               thought.
             </p>
             <Image
-              src="/images/image_1.png"
+              src="/images/image_1.jpg"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -51,38 +51,38 @@ const data = [
   {
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
-    src: "/images/image_1.png",
+    src: "/images/image_1.jpg",
     content: <DummyContent />,
   },
   {
     category: "Productivity",
     title: "Enhance your productivity.",
-    src: "/images/image_9.png",
+    src: "/images/image_9.jpg",
     content: <DummyContent />,
   },
   {
     category: "Product",
     title: "Launching the new Apple Vision Pro.",
-    src: "/images/image_6.png",
+    src: "/images/image_6.jpg",
     content: <DummyContent />,
   },
 
   {
     category: "Product",
     title: "Maps for your iPhone 15 Pro Max.",
-    src: "/images/image_7.png",
+    src: "/images/image_7.jpg",
     content: <DummyContent />,
   },
   {
     category: "iOS",
     title: "Photography just got better.",
-    src: "/images/image_2.png",
+    src: "/images/image_2.jpg",
     content: <DummyContent />,
   },
   {
     category: "Hiring",
     title: "Hiring for a Staff Software Engineer",
-    src: "/images/image_5.png",
+    src: "/images/image_5.jpg",
     content: <DummyContent />,
   },
 ];

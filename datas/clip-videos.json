@@ -1,0 +1,39 @@
+[
+  {
+    "authors": "Oprah",
+    "title": "Position Cadeau",
+    "image": "https://i.scdn.co/image/ab67616d00001e02a2f4578fc64993f3b07fa353",
+    "links": {
+      "youtube": "",
+      "spotify": "https://open.spotify.com/intl-fr/track/52YoCucAqW2VBwqtpeoXhU?si=b39058f8d5be44ba",
+      "appleMusic": "",
+      "boomplay": "https://www.boomplay.com/songs/187524386?srModel=COPYLINK&srList=WEB",
+      "deezer": "https://deezer.page.link/RGjJAawgzdGcNfGw7"
+    },
+    "iframes": {
+      "video": "",
+      "music": "https://open.spotify.com/embed/track/52YoCucAqW2VBwqtpeoXhU?utm_source=generator"
+    },
+    "description": "",
+    "year": "2021"
+  },
+  {
+    "authors": "Oprah",
+    "title": "Moko",
+    "image": "https://i.scdn.co/image/ab67616d0000b273303852328249b0967f66f884",
+    "links": {
+      "youtube": "https://youtu.be/H07TIi3kLaI?si=u3WuWuwqCDWQh7RC",
+      "spotify": "https://open.spotify.com/intl-fr/track/5GnIMxvLVLPJqkPaovKUyC?si=f9c2a02a2c1d42b0",
+      "appleMusic": "",
+      "boomplay": "https://www.boomplay.com/songs/170642190?srModel=COPYLINK&srList=WEB",
+      "deezer": "https://deezer.page.link/xCoW2PcVHEWe4H8YA"
+    },
+    "iframes": {
+      "video": "https://www.youtube.com/embed/H07TIi3kLaI?si=u3WuWuwqCDWQh7RC",
+      "music": "https://open.spotify.com/embed/track/5GnIMxvLVLPJqkPaovKUyC?utm_source=generator"
+    },
+    "description": "",
+    "year": "2021"
+  }
+]
+

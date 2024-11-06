@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export function GalleryContent() {
   const images = [
-    "/images/image_2.png",
-    "/images/image_9.png",
-    "/images/image_6.png",
-    "/images/image_7.png",
+    "/images/image_2.jpg",
+    "/images/image_9.jpg",
+    "/images/image_6.jpg",
+    "/images/image_7.jpg",
   ];
   return (
     <div className="flex justify-center py-8 items-center">

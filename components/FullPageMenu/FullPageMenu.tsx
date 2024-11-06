@@ -7,14 +7,14 @@ import Image, { StaticImageData } from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import img1 from "@/public/images/image_1.png";
-import img2 from "@/public/images/image_2.png";
-import img3 from "@/public/images/image_3.png";
-import img4 from "@/public/images/image_4.png";
-import img5 from "@/public/images/image_6.png";
-import img6 from "@/public/images/image_7.png";
-import img7 from "@/public/images/image_8.png";
-import img9 from "@/public/images/image_9.png";
+import img1 from "@/public/images/image_1.jpg";
+import img2 from "@/public/images/image_2.jpg";
+import img3 from "@/public/images/image_3.jpg";
+import img4 from "@/public/images/image_4.jpg";
+import img5 from "@/public/images/image_6.jpg";
+import img6 from "@/public/images/image_7.jpg";
+import img7 from "@/public/images/image_8.jpg";
+import img9 from "@/public/images/image_9.jpg";
 
 interface MenuItem {
   title: string;
@@ -40,7 +40,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "BIOGRAPHIE",
-    href: "#biography",
+    href: "/biography",
     image: img2,
     content: (
       <>
@@ -71,7 +71,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "CLIP VIDÉOS",
-    href: "#videos",
+    href: "/clip-video",
     image: img4,
     content: (
       <>
@@ -86,7 +86,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "MUSICS",
-    href: "#musics",
+    href: "/musics",
     image: img5,
     content: (
       <>

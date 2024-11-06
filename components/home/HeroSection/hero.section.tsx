@@ -25,7 +25,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         className="absolute top-0 left-0 w-full h-full z-[0]"
         style={{
-          backgroundImage: "url('/images/image_2.png')",
+          backgroundImage: "url('/images/image_2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
