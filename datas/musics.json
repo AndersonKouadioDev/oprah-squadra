@@ -12,7 +12,7 @@
     },
     "iframes": {
       "video": "",
-      "music": "https://open.spotify.com/embed/track/52YoCucAqW2VBwqtpeoXhU?utm_source=generator"
+      "music": "https://open.spotify.com/embed/track/52YoCucAqW2VBwqtpeoXhU?utm_source=generator&theme=0"
     },
     "description": "",
     "year": "2024"
@@ -30,7 +30,7 @@
     },
     "iframes": {
       "video": "https://www.youtube.com/embed/G98I9bzHuvg?si=GKpD1SxMpHr4B1Gj",
-      "music": "https://open.spotify.com/embed/track/5J9oXV3CBPSPIwmGis3JUJ?utm_source=generator"
+      "music": "https://open.spotify.com/embed/track/5J9oXV3CBPSPIwmGis3JUJ?utm_source=generator&theme=0"
     },
     "description": "",
     "year": "2024"
@@ -48,9 +48,47 @@
     },
     "iframes": {
       "video": "https://www.youtube.com/embed/H07TIi3kLaI?si=u3WuWuwqCDWQh7RC",
-      "music": "https://www.boomplay.com/embed/170642190/MUSIC?colType=2&colID=6201693"
+      "music": "https://open.spotify.com/embed/track/5GnIMxvLVLPJqkPaovKUyC?utm_source=generator&theme=0"
+    },
+    "description": "",
+    "year": "2021"
+  },
+  {
+    "authors": "Oprah",
+    "title": "Aya",
+    "image": "https://i.scdn.co/image/ab67616d00001e02c1c26f9c7de7586950b5938e",
+    "links": {
+      "youtube": "https://youtu.be/4S7UMkS6_8I?si=zqthS3YjQnT1P-7Q",
+      "spotify": "https://open.spotify.com/intl-fr/track/64teDzKSx9B0cPCJmd4XiN?si=f0300744a73944c1",
+      "appleMusic": "",
+      "boomplay": "https://www.boomplay.com/songs/76404928?srModel=COPYLINK&srList=WEB",
+      "deezer": "https://deezer.page.link/xTZmTu7MV8CxbpFPA"
+    },
+    "iframes": {
+      "video": "https://www.youtube.com/embed/4S7UMkS6_8I?si=E5wq52vMxENU9CMJ",
+      "music": "https://open.spotify.com/embed/track/64teDzKSx9B0cPCJmd4XiN?utm_source=generator&theme=0"
+    },
+    "description": "",
+    "year": "2021"
+  },
+  {
+    "authors": "Oprah",
+    "title": "Tchoko Tchoko",
+    "image": "https://i.scdn.co/image/ab67616d00001e02d2338ca3dbead43c03621413",
+    "links": {
+      "youtube": "https://youtu.be/e6w6bTiv6ho?si=CZ5vg5xAsSM66Zaz",
+      "spotify": "https://open.spotify.com/track/0zIrGicj9n3aEZEe9ENWYf?si=UCSmJc5YRcKN8uYxuci7SQ",
+      "appleMusic": "",
+      "boomplay": "https://www.boomplay.com/songs/63953135?srModel=COPYLINK&srList=WEB",
+      "deezer": "https://deezer.page.link/DJ5CU2t5AZzyNLpN9"
+    },
+    "iframes": {
+      "video": "https://www.youtube.com/embed/e6w6bTiv6ho?si=CZ5vg5xAsSM66Zaz",
+      "music": "https://open.spotify.com/embed/track/0zIrGicj9n3aEZEe9ENWYf?utm_source=generator&theme=0"
     },
     "description": "",
     "year": "2021"
   }
 ]
+
+

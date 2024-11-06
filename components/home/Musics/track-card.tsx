@@ -26,16 +26,19 @@ export default function TackCard({
       viewport={{ once: true, amount: 0.2 }}
       className="w-full"
     >
-      <div className="relative rounded-t-3xl bg-neutral-800 mx-auto h-[300px] max-w-xl group mb-[28%]">
+      <div className="relative rounded-t-3xl mx-auto bg-[#282828] h-[260px] max-w-xl group mb-[28%]">
         {music.iframes[platform] ? (
           <iframe
-            className="rounded-t-3xl bg-neutral-800"
+            className="rounded-t-3xl bg-gradient-to-t from-black via-[#28282847] via-20% to-[#282828] overflow-hidden"
             src={music.iframes[platform]}
             width="100%"
             height="100%"
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
+            style={{
+              overflow: "hidden",
+            }}
           ></iframe>
         ) : (
           <div className="flex items-center justify-center h-full bg-gradient-to-r from-gray-800 to-black rounded-t-3xl">
