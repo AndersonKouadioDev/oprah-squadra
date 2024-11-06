@@ -26,7 +26,7 @@ export default function TackCard({
       viewport={{ once: true, amount: 0.2 }}
       className="w-full"
     >
-      <div className="relative rounded-t-3xl mx-auto h-[300px] max-w-xl group mb-[28%]">
+      <div className="relative rounded-t-3xl bg-neutral-800 mx-auto h-[300px] max-w-xl group mb-[28%]">
         {clipVideo.iframes[platform] ? (
           <iframe
             className="rounded-t-3xl bg-neutral-800"

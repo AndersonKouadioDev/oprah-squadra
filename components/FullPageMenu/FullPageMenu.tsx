@@ -9,12 +9,12 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import img1 from "@/public/images/image_1.jpg";
 import img2 from "@/public/images/image_2.jpg";
-import img3 from "@/public/images/image_3.jpg";
+// import img3 from "@/public/images/image_3.jpg";
 import img4 from "@/public/images/image_4.jpg";
-import img5 from "@/public/images/image_6.jpg";
-import img6 from "@/public/images/image_7.jpg";
-import img7 from "@/public/images/image_8.jpg";
-import img9 from "@/public/images/image_9.jpg";
+// import img5 from "@/public/images/image_6.jpg";
+// import img6 from "@/public/images/image_7.jpg";
+// import img7 from "@/public/images/image_8.jpg";
+// import img9 from "@/public/images/image_9.jpg";
 
 interface MenuItem {
   title: string;
@@ -54,21 +54,21 @@ const menuItems: MenuItem[] = [
       </>
     ),
   },
-  {
-    title: "DATES / CONCERTS",
-    href: "#concerts",
-    image: img3,
-    content: (
-      <>
-        <h3 className="text-2xl font-bold mb-2">Prochains concerts</h3>
-        <ul className="list-disc list-inside mt-2">
-          <li>15 Juin 2024 - Paris, France</li>
-          <li>22 Juin 2024 - Lyon, France</li>
-          <li>29 Juin 2024 - Marseille, France</li>
-        </ul>
-      </>
-    ),
-  },
+  // {
+  //   title: "DATES / CONCERTS",
+  //   href: "#concerts",
+  //   image: img3,
+  //   content: (
+  //     <>
+  //       <h3 className="text-2xl font-bold mb-2">Prochains concerts</h3>
+  //       <ul className="list-disc list-inside mt-2">
+  //         <li>15 Juin 2024 - Paris, France</li>
+  //         <li>22 Juin 2024 - Lyon, France</li>
+  //         <li>29 Juin 2024 - Marseille, France</li>
+  //       </ul>
+  //     </>
+  //   ),
+  // },
   {
     title: "CLIP VIDÉOS",
     href: "/clip-video",
@@ -84,71 +84,71 @@ const menuItems: MenuItem[] = [
       </>
     ),
   },
-  {
-    title: "MUSICS",
-    href: "/musics",
-    image: img5,
-    content: (
-      <>
-        <h3 className="text-2xl font-bold mb-2">Discographie</h3>
-        <ul className="list-disc list-inside mt-2">
-          <li>&quot;Squadra Dreams&quot; (2024)</li>
-          <li>&quot;Oprah&apos;s World&quot; (2022)</li>
-          <li>&quot;First Steps&quot; (2020)</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    title: "SHOP DE LA SQUADRA",
-    href: "#shop",
-    image: img6,
-    content: (
-      <>
-        <h3 className="text-2xl font-bold mb-2">Boutique officielle</h3>
-        <p>Découvrez notre collection exclusive de merchandising :</p>
-        <ul className="list-disc list-inside mt-2">
-          <li>T-shirts</li>
-          <li>Hoodies</li>
-          <li>Accessoires</li>
-          <li>Éditions limitées</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    title: "REJOINDRE LA TEAM",
-    href: "#join",
-    image: img7,
-    content: (
-      <>
-        <h3 className="text-2xl font-bold mb-2">Devenez membre</h3>
-        <p>Rejoignez la Squadra et bénéficiez d&apos;avantages exclusifs :</p>
-        <ul className="list-disc list-inside mt-2">
-          <li>Accès prioritaire aux billets de concert</li>
-          <li>Contenu exclusif</li>
-          <li>Rencontres avec Oprah</li>
-          <li>Réductions sur le merchandising</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    title: "CONTACTEZ-NOUS",
-    href: "#contact",
-    image: img9,
-    content: (
-      <>
-        <h3 className="text-2xl font-bold mb-2">Restons en contact</h3>
-        <p>Nous sommes là pour répondre à toutes vos questions.</p>
-        <div className="mt-2">
-          <p>Email: contact@oprahsquadra.com</p>
-          <p>Téléphone: +33 1 23 45 67 89</p>
-          <p>Adresse: 123 Rue de la Musique, 75000 Paris</p>
-        </div>
-      </>
-    ),
-  },
+  // {
+  //   title: "MUSICS",
+  //   href: "/musics",
+  //   image: img5,
+  //   content: (
+  //     <>
+  //       <h3 className="text-2xl font-bold mb-2">Discographie</h3>
+  //       <ul className="list-disc list-inside mt-2">
+  //         <li>&quot;Squadra Dreams&quot; (2024)</li>
+  //         <li>&quot;Oprah&apos;s World&quot; (2022)</li>
+  //         <li>&quot;First Steps&quot; (2020)</li>
+  //       </ul>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "SHOP DE LA SQUADRA",
+  //   href: "#shop",
+  //   image: img6,
+  //   content: (
+  //     <>
+  //       <h3 className="text-2xl font-bold mb-2">Boutique officielle</h3>
+  //       <p>Découvrez notre collection exclusive de merchandising :</p>
+  //       <ul className="list-disc list-inside mt-2">
+  //         <li>T-shirts</li>
+  //         <li>Hoodies</li>
+  //         <li>Accessoires</li>
+  //         <li>Éditions limitées</li>
+  //       </ul>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "REJOINDRE LA TEAM",
+  //   href: "#join",
+  //   image: img7,
+  //   content: (
+  //     <>
+  //       <h3 className="text-2xl font-bold mb-2">Devenez membre</h3>
+  //       <p>Rejoignez la Squadra et bénéficiez d&apos;avantages exclusifs :</p>
+  //       <ul className="list-disc list-inside mt-2">
+  //         <li>Accès prioritaire aux billets de concert</li>
+  //         <li>Contenu exclusif</li>
+  //         <li>Rencontres avec Oprah</li>
+  //         <li>Réductions sur le merchandising</li>
+  //       </ul>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "CONTACTEZ-NOUS",
+  //   href: "#contact",
+  //   image: img9,
+  //   content: (
+  //     <>
+  //       <h3 className="text-2xl font-bold mb-2">Restons en contact</h3>
+  //       <p>Nous sommes là pour répondre à toutes vos questions.</p>
+  //       <div className="mt-2">
+  //         <p>Email: contact@oprahsquadra.com</p>
+  //         <p>Téléphone: +33 1 23 45 67 89</p>
+  //         <p>Adresse: 123 Rue de la Musique, 75000 Paris</p>
+  //       </div>
+  //     </>
+  //   ),
+  // },
 ];
 export default function FullPageMenu() {
   const [isOpen, setIsOpen] = useState(false);
