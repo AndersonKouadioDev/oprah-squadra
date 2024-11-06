@@ -5,18 +5,19 @@ import BeautifulTitle from "@/components/ui/beautifulTitle";
 import { motion } from "framer-motion";
 import Motion from "@/components/motion";
 import Image from "next/image";
+import { MusicsContent } from "./musics.content";
+import musics from "@/datas/musics.json";
 
-
-export default function ClipVideoSection() {
+export default function MusicsSection() {
   return (
     <Section
-      id="clip-video"
+      id="musics"
       className="min-h-screen relative bg-black w-full px-6 py-20 lg:px-12 lg:py-32"
     >
       {/* Content */}
       <div className="relative z-[2] flex flex-col gap-10">
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
-          <BeautifulTitle title="Clip Video" />
+          <BeautifulTitle title="Musiques" />
           <div className="max-w-lg">
             <Motion
               variant="fadeIn"
@@ -49,6 +50,7 @@ export default function ClipVideoSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="w-full"
         >
+          <MusicsContent musics={musics} />
         </Motion>
       </div>
 

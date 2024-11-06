@@ -1,16 +1,16 @@
 "use client";
-import { Music, Video } from "lucide-react";
+import { Music as MusicIcon, Video as VideoIcon } from "lucide-react";
 import { Dispatch, SetStateAction, useState } from "react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import { ClipVideo, Platform } from "@/type";
+import { Music, Platform } from "@/type";
 import Motion from "@/components/motion";
 
 export default function TackCard({
   index,
-  clipVideo,
+  music,
 }: {
   index: number;
-  clipVideo: ClipVideo;
+  music: Music;
 }) {
   const [platform, setPlatform] = useState<Platform>("music");
   return (
@@ -27,10 +27,10 @@ export default function TackCard({
       className="w-full"
     >
       <div className="relative rounded-t-3xl bg-neutral-800 mx-auto h-[300px] max-w-xl group mb-[28%]">
-        {clipVideo.iframes[platform] ? (
+        {music.iframes[platform] ? (
           <iframe
             className="rounded-t-3xl bg-neutral-800"
-            src={clipVideo.iframes[platform]}
+            src={music.iframes[platform]}
             width="100%"
             height="100%"
             allowFullScreen
@@ -46,7 +46,7 @@ export default function TackCard({
         )}
         <div className="py-2 bg-neutral-800 rounded-b-3xl backdrop-blur-lg">
           <PlateformesControl
-            clipVideo={clipVideo}
+            music={music}
             platform={platform}
             setPlatform={setPlatform}
           />
@@ -60,12 +60,12 @@ export const PlateformesControl = ({
   platform,
   setPlatform,
   className,
-  clipVideo,
+  music,
 }: {
   platform: Platform;
   setPlatform: Dispatch<SetStateAction<Platform>>;
   className?: string;
-  clipVideo: ClipVideo;
+  music: Music;
 }) => {
   return (
     <div
@@ -76,7 +76,7 @@ export const PlateformesControl = ({
       ) : (
         <VideoButton onClick={() => setPlatform("video")} />
       )}
-      <Plaform clipVideo={clipVideo} />
+      <Plaform music={music} />
     </div>
   );
 };
@@ -96,7 +96,7 @@ export const VideoButton = ({
       <div
         className={`flex items-center justify-center bg-gradient-to-b from-[red]/30 to-[red] shadow-md rounded-full size-12 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
       >
-        <Video className="size-6 text-white  fill-[red] group-hover:scale-105 scale-100 transition-transform duration-200 ease-out" />
+        <VideoIcon className="size-6 text-white  fill-[red] group-hover:scale-105 scale-100 transition-transform duration-200 ease-out" />
       </div>
     </div>
   );
@@ -117,17 +117,17 @@ export const MusicButton = ({
       <div
         className={`flex items-center justify-center bg-gradient-to-b from-blue-500/30 to-blue-500 shadow-md rounded-full size-12 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
       >
-        <Music className="size-6 text-white  fill-blue-500 group-hover:scale-105 scale-100 transition-transform duration-200 ease-out" />
+        <MusicIcon className="size-6 text-white  fill-blue-500 group-hover:scale-105 scale-100 transition-transform duration-200 ease-out" />
       </div>
     </div>
   );
 };
 
 export const Plaform = ({
-  clipVideo,
+  music,
   className,
 }: {
-  clipVideo: ClipVideo;
+  music: Music;
   className?: string;
 }) => {
   return (
@@ -139,31 +139,31 @@ export const Plaform = ({
             id: 1,
             name: "Youtube",
             image: "/images/brands/youtube.png",
-            link: clipVideo?.links.youtube,
+            link: music?.links.youtube,
           },
           {
             id: 2,
             name: "Spotify",
             image: "/images/brands/spotify.png",
-            link: clipVideo?.links.spotify,
+            link: music?.links.spotify,
           },
           {
             id: 3,
             name: "Apple Music",
             image: "/images/brands/apple-music.png",
-            link: clipVideo?.links.appleMusic,
+            link: music?.links.appleMusic,
           },
           {
             id: 4,
             name: "Boomplay",
             image: "/images/brands/boomplay.png",
-            link: clipVideo?.links.boomplay,
+            link: music?.links.boomplay,
           },
           {
             id: 5,
             name: "Deezer",
             image: "/images/brands/deezer.png",
-            link: clipVideo?.links.deezer,
+            link: music?.links.deezer,
           },
         ]}
       />

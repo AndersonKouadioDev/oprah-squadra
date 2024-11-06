@@ -9,13 +9,13 @@ import Motion from "@/components/motion";
 export default function AlbumSection() {
   return (
     <Section
-      id="musics"
+      id="albums"
       className="min-h-screen relative bg-black w-full px-6 py-20 lg:px-12 lg:py-32"
     >
       {/* Content */}
       <div className="relative z-[2] overflow-hidden">
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-between items-center">
-          <BeautifulTitle title="Musics" />
+          <BeautifulTitle title="Albums" />
           <div className="max-w-lg">
             <Motion
               variant="fadeIn"
@@ -23,7 +23,7 @@ export default function AlbumSection() {
                 delay: 0.6,
               }}
               viewport={{ once: true, amount: 0.2 }}
-            ></Motion>
+            ></Motion>    
           </div>
         </div>
         <Motion

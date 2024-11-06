@@ -10,8 +10,8 @@ import { usePathname } from "next/navigation";
 import img1 from "@/public/images/image_1.jpg";
 import img2 from "@/public/images/image_2.jpg";
 // import img3 from "@/public/images/image_3.jpg";
-import img4 from "@/public/images/image_4.jpg";
-// import img5 from "@/public/images/image_6.jpg";
+// import img4 from "@/public/images/image_4.jpg";
+import img5 from "@/public/images/image_6.jpg";
 // import img6 from "@/public/images/image_7.jpg";
 // import img7 from "@/public/images/image_8.jpg";
 // import img9 from "@/public/images/image_9.jpg";
@@ -54,6 +54,21 @@ const menuItems: MenuItem[] = [
       </>
     ),
   },
+  {
+    title: "MUSICS",
+    href: "/musics",
+    image: img5,
+    content: (
+      <>
+        <h3 className="text-2xl font-bold mb-2">Discographie</h3>
+        <ul className="list-disc list-inside mt-2">
+          <li>&quot;Squadra Dreams&quot; (2024)</li>
+          <li>&quot;Oprah&apos;s World&quot; (2022)</li>
+          <li>&quot;First Steps&quot; (2020)</li>
+        </ul>
+      </>
+    ),
+  },
   // {
   //   title: "DATES / CONCERTS",
   //   href: "#concerts",
@@ -69,36 +84,22 @@ const menuItems: MenuItem[] = [
   //     </>
   //   ),
   // },
-  {
-    title: "CLIP VIDÉOS",
-    href: "/clip-video",
-    image: img4,
-    content: (
-      <>
-        <h3 className="text-2xl font-bold mb-2">Derniers clips</h3>
-        <ul className="list-disc list-inside mt-2">
-          <li>&quot;Squadra Life&quot; - Sorti le 1er Mai 2024</li>
-          <li>&quot;Rêves en Or&quot; - Sorti le 15 Avril 2024</li>
-          <li>&quot;Nuit Étoilée&quot; - Sorti le 1er Avril 2024</li>
-        </ul>
-      </>
-    ),
-  },
   // {
-  //   title: "MUSICS",
-  //   href: "/musics",
-  //   image: img5,
+  //   title: "CLIP VIDÉOS",
+  //   href: "/clip-video",
+  //   image: img4,
   //   content: (
   //     <>
-  //       <h3 className="text-2xl font-bold mb-2">Discographie</h3>
+  //       <h3 className="text-2xl font-bold mb-2">Derniers clips</h3>
   //       <ul className="list-disc list-inside mt-2">
-  //         <li>&quot;Squadra Dreams&quot; (2024)</li>
-  //         <li>&quot;Oprah&apos;s World&quot; (2022)</li>
-  //         <li>&quot;First Steps&quot; (2020)</li>
+  //         <li>&quot;Squadra Life&quot; - Sorti le 1er Mai 2024</li>
+  //         <li>&quot;Rêves en Or&quot; - Sorti le 15 Avril 2024</li>
+  //         <li>&quot;Nuit Étoilée&quot; - Sorti le 1er Avril 2024</li>
   //       </ul>
   //     </>
   //   ),
   // },
+
   // {
   //   title: "SHOP DE LA SQUADRA",
   //   href: "#shop",
@@ -160,7 +161,6 @@ export default function FullPageMenu() {
     setIsOpen(!isOpen);
     setActiveItem(null);
   };
-  
 
   const handleItemClick = (title: string) => {
     setActiveItem(title === activeItem ? null : title);

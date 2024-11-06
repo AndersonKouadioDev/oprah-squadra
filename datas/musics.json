@@ -19,6 +19,24 @@
   },
   {
     "authors": "Oprah",
+    "title": "Le Plus Fort",
+    "image": "https://i.scdn.co/image/ab67616d00001e0288f48d138e6532451e665ae6",
+    "links": {
+      "youtube": "https://youtu.be/G98I9bzHuvg?si=GKpD1SxMpHr4B1Gj",
+      "spotify": "https://open.spotify.com/intl-fr/track/5J9oXV3CBPSPIwmGis3JUJ?si=1b757bf0221f44e7",
+      "appleMusic": "",
+      "boomplay": "https://www.boomplay.com/songs/167503072?srModel=COPYLINK&srList=WEB",
+      "deezer": "https://deezer.page.link/EEHbvEmT8e3UVoLc7"
+    },
+    "iframes": {
+      "video": "https://www.youtube.com/embed/G98I9bzHuvg?si=GKpD1SxMpHr4B1Gj",
+      "music": "https://open.spotify.com/embed/track/5J9oXV3CBPSPIwmGis3JUJ?utm_source=generator"
+    },
+    "description": "",
+    "year": "2024"
+  },
+  {
+    "authors": "Oprah",
     "title": "Moko",
     "image": "https://i.scdn.co/image/ab67616d0000b273303852328249b0967f66f884",
     "links": {
@@ -36,4 +54,3 @@
     "year": "2021"
   }
 ]
-

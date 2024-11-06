@@ -1,18 +1,17 @@
 "use client";
 import React from "react";
 import TackCard from "./track-card";
-import { ClipVideo } from "@/type";
+import { Music } from "@/type";
 
-// ClipVideoContent.tsx
-export function ClipVideoContent({ clipVideos }: { clipVideos: ClipVideo[] }) {
+export function MusicsContent({ musics }: { musics: Music[] }) {
   return (
     <>
       <ul className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 items-start py-10">
-        {clipVideos.map((clipVideo, index) => (
+        {musics.map((music, index) => (
           <TackCard
-            key={clipVideo.title}
+            key={music.title}
             index={index}
-            clipVideo={clipVideo as unknown as ClipVideo}
+            music={music as unknown as Music}
           />
         ))}
       </ul>

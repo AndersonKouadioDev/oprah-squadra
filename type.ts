@@ -1,6 +1,6 @@
 export type Platform = "music" | "video";
 
-export interface ClipVideo {
+export interface Music {
   authors: string;
   title: string;
   image: string;
