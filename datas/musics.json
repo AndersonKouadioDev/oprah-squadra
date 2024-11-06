@@ -88,6 +88,24 @@
     },
     "description": "",
     "year": "2021"
+  },
+  {
+    "authors": "Oprah",
+    "title": "Amina",
+    "image": "https://i.scdn.co/image/ab67616d00001e02e1976411e094bdfc7c5059ec",
+    "links": {
+      "youtube": "https://youtu.be/iBXheQ5_eBo?si=b6qvMdyO3pb2xzd7",
+      "spotify": "https://open.spotify.com/intl-fr/track/1XjvtoeRPImKRjVSmS8WXx?si=8a45ea011c1f4653",
+      "appleMusic": "",
+      "boomplay": "https://www.boomplay.com/songs/115583274?srModel=COPYLINK&srList=WEB",
+      "deezer": "https://deezer.page.link/xgsTjpnTpu3yhLtN8"
+    },
+    "iframes": {
+      "video": "https://www.youtube.com/embed/iBXheQ5_eBo?si=b6qvMdyO3pb2xzd7",
+      "music": "https://open.spotify.com/embed/track/1XjvtoeRPImKRjVSmS8WXx?utm_source=generator&theme=0"
+    },
+    "description": "",
+    "year": "2023"
   }
 ]
 
