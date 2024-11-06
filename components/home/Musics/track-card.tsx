@@ -93,13 +93,13 @@ export const VideoButton = ({
 }) => {
   return (
     <div
-      className={`bg-[red]/10 flex items-center justify-center rounded-full backdrop-blur-md size-20 cursor-pointer ${className}`}
+      className={`bg-[green]/10 flex items-center justify-center rounded-full backdrop-blur-md size-20 cursor-pointer ${className}`}
       onClick={onClick}
     >
       <div
-        className={`flex items-center justify-center bg-gradient-to-b from-[red]/30 to-[red] shadow-md rounded-full size-12 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
+        className={`flex items-center justify-center bg-gradient-to-b from-[green]/30 to-[green] shadow-md rounded-full size-12 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
       >
-        <VideoIcon className="size-6 text-white  fill-[red] group-hover:scale-105 scale-100 transition-transform duration-200 ease-out" />
+        <VideoIcon className="size-6 text-white  fill-[green] group-hover:scale-105 scale-100 transition-transform duration-200 ease-out" />
       </div>
     </div>
   );
