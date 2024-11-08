@@ -1,13 +1,6 @@
 "use client";
 
 import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalTrigger,
-} from "../ui/animated-modal";
-
-import {
   Drawer,
   DrawerClose,
   DrawerContent,
