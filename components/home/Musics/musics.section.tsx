@@ -7,8 +7,15 @@ import Motion from "@/components/motion";
 import Image from "next/image";
 import { MusicsContent } from "./musics.content";
 import musics from "@/datas/musics.json";
+import { useRouter } from "next/navigation";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
-export default function MusicsSection() {
+export default function MusicsSection({
+  musicsToShow = 0,
+}: {
+  musicsToShow?: number;
+}) {
+  const router = useRouter();
   return (
     <Section
       id="musics"
@@ -50,7 +57,19 @@ export default function MusicsSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="w-full"
         >
-          <MusicsContent musics={musics} />
+          <MusicsContent
+            musics={musicsToShow ? musics.slice(0, musicsToShow) : musics}
+          />
+          {musicsToShow && (
+            <RainbowButton
+              onClick={() => {
+                router.push("/musics");
+            }}
+            className="text-white font-bold block mx-auto"
+          >
+            Voir plus
+            </RainbowButton>
+          )}
         </Motion>
       </div>
 

@@ -29,7 +29,7 @@ export default function TackCard({
       <div className="relative rounded-t-3xl mx-auto bg-[#282828] h-[260px] max-w-xl group mb-[28%]">
         {music.iframes[platform] ? (
           <iframe
-            className="rounded-t-3xl bg-gradient-to-t from-black via-[#28282847] via-20% to-[#282828] overflow-hidden"
+            className="rounded-t-3xl overflow-hidden"
             src={music.iframes[platform]}
             width="100%"
             height="100%"

@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       {/* <AlbumSection /> */}
       <BiographySection />
-      <MusicsSection />
+      <MusicsSection musicsToShow={6} />
     </div>
   );
 }

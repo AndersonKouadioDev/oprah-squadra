@@ -6,6 +6,7 @@ import { siteConfig } from "@/lib/config";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { HeroVideoDialogSection } from "./heroVideo.section";
+import PrivateListeningForm from "@/components/PrivateListeningForm/PrivateListeningForm";
 
 export default function HeroSection() {
   const { scrollY } = useScroll({
@@ -85,6 +86,22 @@ export default function HeroSection() {
           </motion.div>
         </div>
         <HeroVideoDialogSection />
+        <div className="flex flex-col gap-4 mx-auto max-w-4xl px-4">
+          <p className="text-white font-medium text-center">
+            A l’occasion de la sortie de mon{" "}
+            <span className="text-yellow-500">EP de 7 titres</span>, THE TREE
+            CORP & LA SQUADRA organise une séance d’écoute privée en exclusivité
+            du EP intitulé{" "}
+            <span className="text-yellow-500">« INCENDIE »</span> 🔥 Ceci est
+            une demande de votre inestimable disponibilité pour le Mardi 26
+            Novembre à partir de 15H à la salle du Majestic à Sococé 2 Pltx à
+            Cocody ✨ Nous serions ravis de confirmer votre présence pour ce jour
+            précieux dans le chemin de l’artiste OPRAH ⚜️ Merci d’en accuser
+            bonne réception.
+          </p>
+          
+          <PrivateListeningForm />
+        </div>
       </main>
     </Section>
   );

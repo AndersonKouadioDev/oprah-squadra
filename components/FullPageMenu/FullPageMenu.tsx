@@ -257,7 +257,7 @@ export default function FullPageMenu() {
                 transition={{ duration: 0.3, delay: 1 }}
                 className="absolute top-56 right-12 transform -rotate-90 origin-right z-10"
               >
-                <motion.p className="tracking-widest title-4 text-green-400 whitespace-nowrap">
+                <motion.p className="tracking-widest title-4 text-primary whitespace-nowrap">
                   oprah squadra
                 </motion.p>
               </motion.div>
@@ -274,7 +274,7 @@ export default function FullPageMenu() {
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="text-sm tracking-widest font-title text-green-400"
+                      className="text-sm tracking-widest font-title text-primary"
                     >
                       Venez découvrir !
                     </motion.p>
@@ -291,8 +291,8 @@ export default function FullPageMenu() {
                         >
                           <button
                             onMouseEnter={() => handleItemClick(item.title)}
-                            className={`text-lg md:text-3xl hover:text-green-400 ${
-                              pathname === item.href ? "text-green-400" : ""
+                            className={`text-lg md:text-3xl hover:text-primary ${
+                              pathname === item.href ? "text-primary" : ""
                             } transition-colors flex items-center space-x-4 font-bigTitle`}
                             onClick={() => router.push(item.href)}
                           >
