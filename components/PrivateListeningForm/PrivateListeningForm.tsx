@@ -55,6 +55,7 @@ export default function PrivateListeningForm() {
         // setStatus("success");
         // toast.success("Votre message a été envoyé avec succès !");
         // formRef.current?.reset();
+        form.reset()
       } else {
         throw new Error(result.error || "Erreur lors de l'envoi du formulaire");
       }
