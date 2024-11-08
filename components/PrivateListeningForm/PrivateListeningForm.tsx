@@ -25,7 +25,6 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ScrollArea } from "../ui/scroll-area";
-import { ContactUs } from "@/src/actions/emails/contact_us.action";
 import { PrivateListening } from "@/src/actions/emails/private_listening.action";
 
 const formSchema = z.object({
