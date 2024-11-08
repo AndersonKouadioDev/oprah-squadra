@@ -25,6 +25,8 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ScrollArea } from "../ui/scroll-area";
+import { ContactUs } from "@/src/actions/emails/contact_us.action";
+import { PrivateListening } from "@/src/actions/emails/private_listening.action";
 
 const formSchema = z.object({
   lastname: z.string().min(2).max(50),
@@ -44,7 +46,28 @@ export default function PrivateListeningForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const result = await PrivateListening({
+        ...values
+      });
+
+      if (result.success) {
+        // setStatus("success");
+        // toast.success("Votre message a été envoyé avec succès !");
+        // formRef.current?.reset();
+      } else {
+        throw new Error(result.error || "Erreur lors de l'envoi du formulaire");
+      }
+    } catch (error) {
+      console.error("Erreur lors de la soumission:", error);
+      // setStatus("error");
+      // toast.error(
+      //   error instanceof Error
+      //     ? error.message
+      //     : "Une erreur s'est produite. Veuillez réessayer."
+      // );
+    }
     console.log(values);
   }
 
